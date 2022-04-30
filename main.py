@@ -122,10 +122,10 @@ def main():
                     img = cv2.circle(img, center, 10, (255, 0, 0))
                     cv2.imshow("Testing testing", img)
 
-                    # gimbal_status = update_gimbal(angle_x=angles[0], angle_y=angles[1])
-                    # if gimbal_status!= True:
-                    #     print(gimbal_status)
-                    #     break
+                    gimbal_status = update_gimbal(angle_x=angles[0], angle_y=angles[1])
+                    if gimbal_status!= True:
+                        print(gimbal_status)
+                        break
                 except BaseException as e:
                     print(e)
                     break
